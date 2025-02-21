@@ -16,41 +16,58 @@ const Hero = () => {
             ease: 'power1.in',
             duration: 1
         })
-        gsap.from('#insta', {
-            x:-750,
-            ease: 'power1.inOut',
-            duration: 1,
-            rotation: 360,
-            delay: 1.5,
+        gsap.to('#paragraph',{
+          opacity: 1,
+          delay: 1.5,
+          ease: 'power2.out',
+          duration: 1
         })
-        gsap.from('#linkedin', {
-            x:-550,
+        gsap.fromTo('#insta', {
+            x:-1250,
+            opacity: 0,
+            
+        },{
+          opacity:1,
+          x:0,
+          ease: 'power1.inOut',
+            duration: 2,
+            rotation: 360,
+            delay: 2,
+          
+        })
+        gsap.fromTo('#linkedin', {
+            x:-1250,
+            opacity: 0,
+        },{
+            opacity: 1,
+            x:0,
             ease: 'power1.inOut',
-            duration: 1,
+            duration: 2,
             rotation: 360,
             delay: 1.5,
         })
     },[])
+
   return (
-    <main className={`${aestheticFont.className} flex   border-2 border-black  flex-col`}>
+    <main className={`${aestheticFont.className} flex h-screen  border-2 border-black  flex-col justify-between`}>
       <div className="flex ">
         <Logo />
       </div>
-      <div className="flex flex-col h-screen items-center justify-center text-yellow-500 [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]">
-        <h1 id='title' className="opacity-0 text-6xl lg:text-8xl ">Ana Carolina</h1>
-        <p id='paragraph' className="text-2xl text-yellow-700">Odontologia 2028</p>
+      <div className="flex flex-col  items-center justify-center text-yellow-500 [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]">
+        <h1 id='title' className="opacity-0 text-5xl lg:text-8xl ">Ana Carolina</h1>
+        <p id='paragraph' className="opacity-0 text-2xl text-yellow-700">Odontologia 2028</p>
       </div>
 
       <div className="text-black flex flex-row justify-evenly items-center py-12">
-        <Link href={''} id='insta'>
-          <div className="border-2 w-20 h-20 text-white border-black p-3 rounded-full hover:bg-yellow-600">
+        <Link href={''} id='insta' className='opacity-0'>
+          <div className=" border-2 border-dashed w-20 h-20 text-white border-black p-3 rounded-full hover:bg-yellow-600">
             <Instagram size={64} className="w-full h-full text-black "/>
           </div>    
         </Link>
 
-        <Link href={''} id='linkedin'>
-          <div className="border-2 w-20 h-20 text-white border-black p-3 rounded-full hover:bg-yellow-600">
-            <Linkedin size={64} className="w-full h-full text-black "/>
+        <Link href={''} id='linkedin' className='opacity-0'>
+          <div className="border-2 border-dashed w-20 h-20  text-white border-black p-3 rounded-full hover:bg-yellow-600">
+            <Linkedin size={64} className="w-full h-full  text-black"/>
           </div>
         </Link>
       </div>
