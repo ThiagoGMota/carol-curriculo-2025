@@ -16,18 +16,21 @@ const Experiencia: React.FC<workinfo> = ({
 }) => {
   return (
     <div>
-        <div className='bg-zinc-200'>
-            <h1>{empresa}</h1>
-            <div className='flex justify-between'>
-                <span>{duracao}</span>
+        <div className='text-2xl'>
+            <h1 className='font-bold text-3xl mb-4'>{empresa}</h1>
+            <div className='flex gap-28 mb-4'>
+                <p className='font-semibold'>{cargo}</p>
+                <span className='text-2xl'>{duracao}</span>
             </div>
             <hr />
-            <p>{cargo}</p>
-            <div>{funcoes.map((funcao)=>(
-                <li key={funcao}>
-                    {funcao}
-                </li>
-            ))}</div>
+            
+            <div className='mb-4'>
+                {funcoes.map((funcao)=>(
+                    <li key={funcao}>
+                        {funcao}
+                    </li>
+                ))}
+            </div>
             <p>{descricao}</p>
         </div>
     </div>

@@ -37,11 +37,11 @@ const About = () => {
     
   
   return (
-    <div className='flex flex-col p-8 justify-evenly my-8 h-screen lg:flex-row mb-20'>
-      <div className=" px-8  max-w-[800px] lg:w-1/2">
+    <div className='flex flex-col p-8 justify-evenly my-8  xl:flex-row mb-20'>
+      <div className=" px-8  xl:w-1/2">
         <Image
           id="img-1"
-          className=" opacity-0 w-full max-w-[600px] rounded-xl "
+          className=" opacity-0 w-full  rounded-xl "
           src={'/carolCover.jpg'}
           width={300}
           height={500}
@@ -49,13 +49,15 @@ const About = () => {
         />
       </div>
 
-      <div className='  lg:w-1/2'>
-        <div className='  xl:mt-12 '>
+      <div className='  xl:w-1/2'>
+        <div className='  '>
           <h1 id='title-about' className={` opacity-0  py-6 text-3xl text-yellow-600 mb-4 ${aestheticFont.className} para` }>
             Quem sou eu ?
           </h1>
           <p id='p-about' className=' opacity-0 lg:text-2xl text-black    xl:text-3xl text-xl para'>
-            Olá. Meu nome é Ana Carolina Mota de Lima, sou estudante de Odontologia do 5° semestre. Atualmente, busco uma oportunidade de estágio para aprimorar minhas habilidades e conhecimentos na área odontológica, ao mesmo tempo em que me mantenho aberta a outras possibilidades de trabalho que possam surgir. Sou uma pessoa proativa, detalhista e comprometida, pronta para somar à equipe e crescer profissionalmente
+          Olá! Meu nome é Ana Carolina Mota de Lima e sou uma apaixonada estudante do 5° semestre de Odontologia. Minha jornada acadêmica tem me despertado um profundo desejo de transformar sorrisos e impactar vidas através da saúde bucal. Atualmente, estou em busca de um estágio onde possa mergulhar de cabeça no universo odontológico, aprimorando minhas habilidades e conhecimentos com a orientação de profissionais experientes.
+
+Além disso, estou aberta a explorar oportunidades em outras áreas que possam enriquecer minha formação e ampliar minha experiência profissional. Acredito que cada nova vivência pode trazer aprendizados valiosos e contribuir para meu desenvolvimento pessoal e profissional. Sou uma pessoa proativa, atenta aos detalhes e extremamente comprometida com tudo que me proponho a fazer. Estou confiante de que posso agregar valor à equipe e trilhar um caminho de sucesso, sempre com entusiasmo e dedicação.
           </p>
         </div>
       </div>
